@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller ODS - Sesión 1</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #2196F3; color: white; text-align: center; padding: 10px; }
+        /* Removed dropdown style as it's no longer present */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+         .banner .title, .banner .subtitle {
+            margin: 0;
+        }
+         .banner hr {
+            border: none;
+            border-top: 1px solid #e0e0e0; /* Light line for separation */
+            margin: 8px 0;
+        }
+         .banner .subtitle {
+            font-size: 0.9em;
+            color: #e0e0e0; /* Lighter color for subtitle */
+            font-weight: normal;
+        }
+        .content { display: none; padding: 15px; border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px; background-color: #f9f9f9; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+         th {
+            background-color: #e9e9e9; /* Lighter grey for headers */
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         li { margin-bottom: 5px; }
+         ul { margin-top: 5px; padding-left: 20px; }
+         em { font-style: italic; color: #555; } /* Style for teacher notes */
+         .time-title { color: #2196F3; margin-bottom: 20px;} /* Blue color for time title */
+    </style>
+    <script>
+        // Removed updateActivities function as time selection is fixed.
+        // function updateActivities() {
+        //     // ... logic would go here if adaptable time versions were needed ...
+        //     // document.getElementById('selected-time').innerText = `Tiempo efectivo de Taller: ${selectedTime} minutos`;
+        // }
+
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+        // Initialize on page load
+        window.onload = function() {
+          // Optionally expand the first activity or 'De un Vistazo' by default
+          // toggleContent('de_un_vistazo_content');
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Taller ODS - Sesión 1: ¡Empieza la Aventura! - Nuestra Misión ODS vs. el Villano</h1>
+    </div>
+    <div class="container">
+        <!-- Removed dropdown menu -->
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de Taller: 40 minutos</h2>
+
+        <!-- De un Vistazo -->
+         <div id="de-un-vistazo" class="activity" data-time="N/A">
+            <div class="banner" onclick="toggleContent('de_un_vistazo_content')">
+                <div class="title">👁️ De un Vistazo: Sesión 1</div>
+                <hr>
+                <div class="subtitle">Resumen rápido de objetivos, tácticas, entregables, materiales y preparación.</div>
+            </div>
+            <div id="de_un_vistazo_content" class="content">
+                <table>
+                    <tr style="background-color: #f9f9f9;">
+                        <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                        <th style="width: 50%;">Materiales y Preparación Previa</th>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Objetivos:</strong>
+                            <ul>
+                                <li>Presentar el taller, la receta "¡Héroes al Rescate!" y el objetivo (crear su propia mini-historia interactiva héroe vs. villano ODS).</li>
+                                <li>Formar "Equipos de Héroes ODS".</li>
+                                <li>Introducir el "Código del Héroe Innovador".</li>
+                                <li>Recordar habilidades básicas de Scratch Jr.</li>
+                                <li>Presentar una selección de ~10 misiones ODS simples y visuales.</li>
+                                <li><strong>Táctica 1:</strong> Que cada equipo elija UNA misión ODS que les interese.</li>
+                                <li><strong>Táctica 2:</strong> Que cada equipo comprenda el conflicto Bien vs. Mal asociado a su misión y empiece a conceptualizar la idea de <em>su propio</em> "villano" (la causa del problema).</li>
+                            </ul>
+                           <strong>Tácticas Principales:</strong> ¡Alerta ODS! (Fence Playground Simpl.), ¿El Bien 👍 vs El Mal 👎 ? (Inspirado en Good & Evil).
+                           <br><strong>Entregable Clave:</strong> Decisión de Equipo: 1 Problema ODS Visual elegido. Comprensión inicial del conflicto Bien/Mal y la idea del "villano" asociado a <em>su</em> problema.
+                        </td>
+                        <td>
+                           <strong>Materiales Específicos:</strong>
+                            <ul>
+                                <li>Proyector o pantalla interactiva.</li>
+                                <li>Presentación de diapositivas (Diapositivas 1-8 revisadas).</li>
+                                <li>Acceso a tablero Miro (o similar) o rotafolios/papel grande por equipo.</li>
+                                <li>Marcadores o herramientas de dibujo digital.</li>
+                                <li>Iconos/Imágenes MUY simples y claras de ~10 problemas/misiones ODS (ver lista en preparación).</li>
+                                <li>Ejemplo "¡Xolo vs. el Basuravirus!" integrado en las diapositivas (como ilustración de las tácticas).</li>
+                            </ul>
+                            <strong>Preparación Previa para ESTA Sesión:</strong>
+                            <ol>
+                                <li><strong>Presentación Lista:</strong> Tener listas las Diapositivas 1 a 8 (Revisadas). Seleccionar y crear iconos/imágenes simples para ~10 misiones ODS (ej: 🍎 Comida para todos, ❤️ Estar sanos, 📚 Aprender mucho, 🧑‍🤝‍🧑 Niños y niñas iguales, 💧 Agua limpia, ☀️ Energía limpia, 🌳 Ciudades bonitas, ♻️ Reciclar basura, ☁️ Cuidar el aire/clima, 🌊 Cuidar el mar, 🐾 Cuidar plantas/animales).</li>
+                                <li><strong>Tablero Digital/Físico:</strong> Preparar espacio para cada equipo.</li>
+                                <li><strong>Código Innovador:</strong> Tener texto ultra-simplificado.</li>
+                                <li><strong>Scratch Jr. Recap:</strong> Recordar 2 bloques MUY básicos (Tap es clave).</li>
+                                <li><strong>Ejemplo Xolo:</strong> Tener lista la descripción de la elección del problema (río sucio) y el concepto del Basuravirus vs. Xolo para ilustrar las tácticas 1 y 2.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1: Bienvenida y Presentación -->
+        <div id="activity-1" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">👋 Actividad 1: Bienvenida y Presentación del Taller / Receta ⏰ Tiempo: 5 minutos</div>
+                <hr>
+                <div class="subtitle">Presentación del taller, el tema ODS y la estructura de la "receta" secreta.</div>
+            </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <tr style="background-color: #e9e9e9;">
+                         <th style="width: 50%;">Acción</th>
+                         <th style="width: 50%;">Diálogo Maestro</th>
+                     </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 1</strong> (Revisada).
+                            <ul>
+                                <li><em>Título:</em> "¡Elige tu Aventura ODS!" (Iconos 🦸✨🌍).</li>
+                                <li><em>Subtítulo:</em> "Mini-Historias Interactivas en Scratch Jr."</li>
+                                <li><em>Imagen:</em> Varios niños/personajes diversos mirando dos caminos (uno soleado, otro nublado) con iconos ODS. <em>(Asegurarse que Xolo no esté aquí para evitar confusión inicial).</em></li>
+                                <li><em>Texto:</em> "¡Vamos a crear historias donde TU HÉROE decide el final para ayudar al planeta!"</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Hola, súper creadores y creadoras! ¡Bienvenidos a la aventura '¡Elige tu Aventura ODS!'"
+                            <br><br>
+                            "¿Les gustan las historias de superhéroes? ¿Se imaginan ser los héroes de sus propias historias? 🤔 ¿Y si les digo que hoy ustedes van a <strong>inventar</strong> a sus propios héroes y villanos para crear historias increíbles en la compu con Scratch Jr.? ¡Serán historias donde ayudamos a nuestro planeta Tierra! 🌎"
+                            <br><br>
+                            "Imaginen un cuento donde ustedes eligen qué pasa... ¡y ven si el planeta se pone feliz 😊 o triste 😟! Eso es lo que vamos a diseñar juntos: ¡su propia mini-historia interactiva!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Proyectar <strong>Diapositiva 2</strong>.
+                            <ul>
+                                <li><em>Contenido:</em> Mostrar visualmente los 8 pasos de la receta "Héroes al Rescate ODS". Mantenerlo simple y visual para 1º Primaria.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "Y para lograrlo, tenemos nuestra receta secreta 🤫✨🦸 ¡'Héroes al Rescate ODS!'. ¡Miren los pasos en la pantalla! Estos son nuestros pasos secretos para convertirnos en héroes del planeta. ¿Listos para empezar la aventura y descubrir cómo salvar el mundo?"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Formación de Equipos -->
+        <div id="activity-2" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_2_content')">
+                <div class="title">🧑‍🤝‍🧑 Actividad 2: Formación de Equipos "Héroes ODS" ⏰ Tiempo: 5 minutos</div>
+                <hr>
+                <div class="subtitle">Organización de los estudiantes en pequeños equipos de colaboración.</div>
+            </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                    <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Guiar la formación de equipos.
+                            <em>(No se especifica diapositiva, usar guía verbal).</em>
+                        </td>
+                        <td>
+                            "¡Todo héroe necesita un equipo! ¡Hasta los más grandes superhéroes trabajan juntos! 💪 Así que ahora, vamos a formar nuestros 'Equipos de Héroes ODS'. Busquen a 2 o 3 amigos o amigas que estén cerca. ¡Ellos serán su equipo para esta misión tan importante!"
+                            <br><br>
+                            <em>(Dar instrucciones claras y rápidas para formar equipos, adecuadas para 1º Primaria. Por ejemplo: "Señalen a dos amigos cerca de ustedes... ¡Ese es su equipo!" o asignar equipos rápidamente).</em>
+                            <br><br>
+                            "¿Ya tienen su equipo? ¡Fantástico! ¡Levanten la mano con su equipo! 🙋‍♀️🙋‍♂️ ¡Genial! Ahora, ¡choquen esos cinco con su nuevo equipo de héroes! 🖐️ ¡Prepárense para crear cosas asombrosas juntos!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Código Héroe Innovador -->
+        <div id="activity-3" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                <div class="title">📜 Actividad 3: Presentación Código del "Héroe Innovador" ⏰ Tiempo: 3 minutos</div>
+                <hr>
+                <div class="subtitle">Introducción a las reglas de oro para el trabajo en equipo y la creatividad.</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                <table>
+                    <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 3</strong>.
+                            <ul>
+                                <li><em>Título:</em> "Código del Héroe Innovador"</li>
+                                <li><em>Texto:</em> Muy simple, con iconos grandes.
+                                    <ol>
+                                        <li>¡Escuchamos a Todos! 👂 (Icono oreja)</li>
+                                        <li>¡Compartimos y Ayudamos! 🤗 (Icono manos ayudando/compartiendo)</li>
+                                        <li>¡Intentamos sin Miedo! 💪 (Icono músculo/estrella)</li>
+                                        <li>¡Nos Divertimos! 😄 (Icono cara feliz)</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Héroes, escuchen atentamente! Todo gran equipo necesita un código secreto para trabajar súper bien juntos y hacer cosas increíbles. ¡Este es nuestro 'Código del Héroe Innovador'!"
+                            <br><br>
+                            <em>(Leer los puntos simplificados con entusiasmo, señalando los iconos):</em>
+                            <ul>
+                                <li><strong>"1. ¡Escuchamos a Todos! 👂:</strong> Las ideas de mis amigos son importantes. ¡Escuchamos con atención!"</li>
+                                <li><strong>"2. ¡Compartimos y Ayudamos! 🤗:</strong> Trabajamos juntos como un gran equipo. ¡Nos ayudamos unos a otros!"</li>
+                                <li><strong>"3. ¡Intentamos sin Miedo! 💪:</strong> No importa si algo parece difícil. Si no sale a la primera, ¡lo volvemos a intentar! ¡Somos valientes!"</li>
+                                <li><strong>"4. ¡Nos Divertimos! 😄:</strong> ¡Crear y aprender es súper divertido! ¡Vamos a disfrutar cada momento!"</li>
+                            </ul>
+                             "¡Este es nuestro súper poder de equipo! 🚀 ¿Prometen seguir este código?" <em>(Esperar un "¡Sí!").</em> "¡Excelente!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 4: Framing: Recordando Scratch Jr. -->
+        <div id="activity-4" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_4_content')">
+                <div class="title">💻 Actividad 4: Framing: ¡Recordando Scratch Jr.! ⏰ Tiempo: 3 minutos</div>
+                <hr>
+                <div class="subtitle">Repaso rápido de bloques básicos de Scratch Jr. necesarios para el taller.</div>
+            </div>
+            <div id="activity_4_content" class="content">
+                 <table>
+                    <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 4</strong>.
+                            <ul>
+                                <li><em>Título:</em> "¡Nuestros Poderes Scratch Jr.!"</li>
+                                <li><em>Iconos Grandes:</em> Bloque flecha -> (Movimiento), Bloque sonido 🔊 (Sonido), Bloque carita feliz/bocadillo 💬 (Saludo/Decir), Bloque bandera verde ▶️ (Inicio).</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Muy bien, Héroes! Ustedes ya saben usar un poco de Scratch Jr., ¿verdad? ¡Es como tener súper poderes en la computadora! 🦸‍♀️💻"
+                            <br><br>
+                            "Vamos a recordar rapidísimo algunos poderes importantes: ¿Recuerdan cómo hacer que el gatito (o nuestro héroe) se <strong>mueva</strong>?" <em>(Señalar icono flecha).</em> "¿Y cómo ponerle <strong>sonidos</strong> divertidos?" <em>(Señalar icono sonido).</em> "¿O hacer que <strong>salude</strong> o diga algo?" <em>(Señalar icono carita/bocadillo).</em> "¿Y cómo empezamos todo?" <em>(Señalar icono bandera verde).</em>
+                            <br><br>
+                            "¡Exacto! ¡Esos son sus poderes! Hoy usaremos esos poderes para hacer historias geniales donde ustedes eligen qué pasa. ¡Será increíble!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 5: Introducción a los ODS (Simplificada) -->
+        <div id="activity-5" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_5_content')">
+                <div class="title">🌍 Actividad 5: Introducción a los ODS (Simplificada) ⏰ Tiempo: 3 minutos</div>
+                <hr>
+                <div class="subtitle">Presentación visual y sencilla de las misiones ODS seleccionadas.</div>
+            </div>
+            <div id="activity_5_content" class="content">
+                 <table>
+                    <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 5</strong> (Revisada).
+                            <ul>
+                                <li><em>Título:</em> ¡10 Misiones ODS para Nuestros Héroes!</li>
+                                <li><em>Imagen:</em> Cuadrícula o diseño visual atractivo (rueda de la fortuna, camino con paradas) mostrando 10 iconos GRANDES, SIMPLES y COLORIDOS de las misiones ODS seleccionadas.</li>
+                                <li><em>Iconos (Ejemplos):</em> 🍎 (Comida), ❤️ (Salud), 📚 (Aprender), 🧑‍🤝‍🧑 (Iguales), 💧 (Agua), ☀️ (Energía), 🌳🏠 (Ciudades), ♻️ (Reciclar), ☁️/🌍 (Aire/Clima), 🐾/🐟 (Animales/Plantas).</li>
+                                <li><em>Texto (Opcional):</em> Palabra clave debajo de cada icono (COMIDA, SALUD, etc.).</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Atención, Héroes! Nuestro planeta Tierra 🌍 tiene algunas misiones súper importantes para que todos vivamos mejor y más felices. ¡Son como los niveles de un gran juego para salvar el mundo! Se llaman ODS."
+                            <br><br>
+                            "¡Miren estas 10 misiones para nuestros superhéroes!"
+                             <br><br>
+                            <em>(Señalar cada icono en la Diapositiva 5 y explicar de forma MUY simple):</em>
+                            <ul>
+                                <li>"🍎 <strong>Comida para Todos:</strong> ¡Esta misión es para que nadie tenga hambre y todos tengamos comida rica y sana para crecer fuertes!"</li>
+                                <li>"❤️ <strong>Estar Sanos:</strong> ¡Esta es para que podamos ir al doctor si nos enfermamos y estemos muy sanos y llenos de energía para jugar!"</li>
+                                <li>"📚 <strong>Aprender Mucho:</strong> ¡Para que todos los niños y niñas del mundo puedan ir a la escuela y aprender cosas nuevas y súper interesantes!"</li>
+                                <li>"🧑‍🤝‍🧑 <strong>Niños y Niñas Iguales:</strong> ¡Esta misión es para que las niñas y los niños tengamos las mismas oportunidades de jugar, aprender y soñar en grande!"</li>
+                                <li>"💧 <strong>Agua Limpia:</strong> ¡Para que el agua que bebemos y usamos esté limpiecita y no nos haga daño, y para que los ríos y mares también estén limpios!"</li>
+                                <li>"☀️ <strong>Energía Limpia:</strong> ¡Para usar la energía del Sol y del Viento, que no ensucian nuestro aire, en lugar de otras energías que sí lo hacen!"</li>
+                                <li>"🌳🏠 <strong>Ciudades Bonitas y Limpias:</strong> ¡Para que nuestras ciudades y pueblos sean lugares lindos, con parques, árboles, casas seguras y aire limpio para respirar!"</li>
+                                <li>"♻️ <strong>Reciclar Basura:</strong> ¡Esta misión es para aprender a separar la basura y convertirla en cosas nuevas, para no llenar el planeta de desechos!"</li>
+                                <li>"☁️/🌍 <strong>Aire Limpio / Cuidar el Clima:</strong> ¡Para cuidar el aire que respiramos y que el clima de nuestro planeta no se vuelva loco con mucho calor o muchas tormentas!"</li>
+                                <li>"🐾/🐟 <strong>Cuidar Animales y Plantas:</strong> ¡Y esta es para proteger a todos los animalitos y plantas del mar y de la tierra, para que tengan un hogar seguro y feliz!"</li>
+                            </ul>
+                        </td>
+                    </tr>
+                 </table>
+            </div>
+        </div>
+
+        <!-- Actividad 6: Táctica 1: ¡Alerta ODS! -->
+        <div id="activity-6" class="activity" data-time="10">
+             <div class="banner" onclick="toggleContent('activity_6_content')">
+                <div class="title">🚨 Actividad 6: Táctica 1: ¡Alerta ODS! ⏰ Tiempo: 10 minutos</div>
+                 <hr>
+                <div class="subtitle">Los equipos eligen la misión ODS que más les interesa para su historia. (Fence Playground Simpl.)</div>
+            </div>
+            <div id="activity_6_content" class="content">
+                <table>
+                    <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 6</strong> (Revisada).
+                            <ul>
+                                <li><em>Título:</em> "¡Paso 1! ¿Cuál es la Alerta ODS de Nuestro Equipo?" (Icono señal ⚠️ + lupa 🔍).</li>
+                                <li><em>Instrucción (Simple):</em> "En equipo: 1. Miren OTRA VEZ TODOS los dibujos de misiones ODS (Diapositiva 5). 2. Hablen y elijan UNA que más les interese o preocupe. ¡Ese será el problema de SU historia!"</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Wow! ¡Son muchas misiones importantes! ¿Verdad? Ahora viene el primer paso de héroe: ¡Hay una <strong>Alerta ODS</strong> y necesitamos decidir cuál atenderá nuestro equipo!"
+                            <br><br>
+                            "Miren de nuevo todas las misiones que vimos." <em>(Señalar Diapositiva 5 o mantenerla visible).</em> "Hablen en su equipo: ¿Cuál les parece la más importante? ¿Cuál les gustaría más para inventar una historia con un héroe y un villano? Pónganse de acuerdo y elijan <strong>UNA SOLA MISIÓN</strong>."
+                            <br><br>
+                            <em>(Dar 5-7 minutos para que discutan y elijan. Circular y ayudar a enfocar si dudan mucho. Recordarles que solo elijan una).</em>
+                            <br><br>
+                            "¿Listos, equipos? ¿Ya tienen su misión? ¡A la cuenta de tres, cada equipo diga fuerte cuál es su misión ODS!" <em>(Escuchar o pedir que levanten la mano/icono).</em>
+                             <br><br>
+                            <em>(Anotar la misión de cada equipo en su espacio de trabajo Miro/rotafolio para referencia futura).</em>
+                            "¡Excelente elección de misiones, equipos!"
+                         </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Proyectar <strong>Diapositiva 7</strong> (Ejemplo Xolo - Ilustración Táctica 1).
+                            <ul>
+                                <li><em>Título:</em> "Ejemplo Táctica 1: ¡El equipo de Xolo eligió el Río Sucio!"</li>
+                                <li><em>Imagen:</em> Dibujo simple del río un poco sucio (el problema visual elegido por el equipo de Xolo).</li>
+                                <li><em>Texto:</em> "Para explicarles cómo funciona, usaremos la historia de Xolo. El equipo que inventó a Xolo vio las opciones y eligió el problema del <strong>Agua Sucia</strong> (ODS 6 o 14)."</li>
+                            </ul>
+                         </td>
+                         <td>
+                            "Para que vean cómo seguir, usaremos como ejemplo la historia de un héroe llamado 'Xolo'. El equipo que inventó a Xolo hizo este mismo paso, miró todas las misiones, y eligió la misión del <strong>Agua Sucia</strong> porque les preocupaba ver un río sucio cerca de su casa."
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Entregable Clave:</strong> Decisión de Equipo: 1 Problema ODS Visual elegido (anotado/marcado).
+                        </td>
+                        <td><em>(Confirmar que cada equipo tenga su misión anotada o clara).</em></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 7: Táctica 2: ¿El Bien vs El Mal? -->
+        <div id="activity-7" class="activity" data-time="7">
+             <div class="banner" onclick="toggleContent('activity_7_content')">
+                 <div class="title">👍👎 Actividad 7: Táctica 2: ¿El Bien vs El Mal? ⏰ Tiempo: 7 minutos</div>
+                 <hr>
+                <div class="subtitle">Conceptualización inicial del conflicto y el "villano" asociado a la misión elegida. (Good & Evil inspired).</div>
+            </div>
+             <div id="activity_7_content" class="content">
+                 <table>
+                     <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 8</strong> (Revisada).
+                            <ul>
+                                <li><em>Título:</em> "Paso 2: ¿El Bien 👍 vs. El Mal 👎 en NUESTRA Misión?" (Iconos pulgar arriba/abajo).</li>
+                                 <li><em>Instrucción (Simple):</em> "En equipo: 1. ¿Por qué es <strong>MALO</strong> [su problema ODS]? 2. ¿Quién o qué causa ese mal en su historia? (¡Su <strong>VILLANO</strong>!). 3. ¿Qué sería lo <strong>BUENO</strong> (el final feliz)?"</li>
+                            </ul>
+                         </td>
+                         <td>
+                            "¡Segundo paso de héroe! Ya tienen su misión ODS. Ahora pensemos... ¿Por qué es <strong>MALO</strong> eso que eligieron?" <em>(Repetir el problema ODS que eligió un equipo como ejemplo).</em> "¿Qué pasa de feo cuando hay [problema ODS]?"
+                            <br><br>
+                            "Y lo más importante... ¿quién o qué está causando ese problema en <strong>SU PROPIA HISTORIA</strong>? ¡Vamos a inventar a su <strong>VILLANO</strong>! ¿Cómo se ve? ¿Qué hace para causar el problema?"
+                            <br><br>
+                             "Y finalmente, si nuestro héroe lo soluciona, ¿qué sería lo <strong>BUENO</strong>? ¿Cómo se ve todo cuando su héroe soluciona el problema? ¿Cuál es el final feliz?"
+                            <br><br>
+                            "¡Hablen en equipo y piensen en estas tres cosas para SU misión! ¿Qué es lo Malo? ¿Quién es el Villano? ¿Qué es lo Bueno?"
+                            <br><br>
+                            <em>(Facilitar la conversación. Ayudarles a personificar o concretar la causa del problema como un "villano" simple. No necesitan dibujarlo perfecto aún, solo la idea).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Proyectar <strong>Diapositiva 9</strong> (Ejemplo Xolo - Ilustración Táctica 2).
+                            <ul>
+                                <li><em>Título:</em> "Ejemplo Táctica 2: ¡Xolo vs. el Basuravirus!"</li>
+                                <li><em>Texto (Simple con iconos/dibujos):</em>
+                                    <ul>
+                                        <li><strong>PROBLEMA:</strong> Río Sucio. 🏞️🤢</li>
+                                        <li><strong>¿MALO?:</strong> Peces tristes. 🐟😟</li>
+                                        <li><strong>VILLANO:</strong> ¡El Basuravirus (BV-R)! (Dibujo simple del virus + humano en trance tirando basura). ¡Hace que la gente tire basura! 🦠🗑️</li>
+                                        <li><strong>¿BUENO?:</strong> Río limpio, peces felices. 🏞️😊🐟🎉</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                         <td>
+                             "Miren el ejemplo de Xolo: Lo <strong>MALO</strong> eran los peces tristes porque el río estaba sucio. Su <strong>VILLANO</strong> fue el 'Basuravirus', un bicho feo que controlaba a la gente para que tirara basura. Lo <strong>BUENO</strong> era el río limpio con peces felices cuando Xolo lo derrotó. ¡Ellos definieron así su lucha del Bien vs. Mal! Ahora ustedes definan la suya."
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Entregable Clave:</strong> Comprensión compartida del conflicto (Bueno/Malo) y la idea inicial del "villano" para su historia (conceptual).
+                             <br><br>
+                            <strong>Transición a la siguiente sesión:</strong> Preparar a los estudiantes para la próxima etapa.
+                        </td>
+                        <td>
+                            <em>(Asegurarse de que cada equipo tenga una idea básica de su Villano y el contraste Bueno/Malo).</em>
+                            <br><br>
+                             "¡Fantástico, Equipos de Héroes! ¡Hoy eligieron su importante misión ODS y ya saben contra qué 'villano' lucharán!"
+                            <br><br>
+                            "En la próxima sesión, ¡nos toca la parte más divertida! ¡Vamos a <strong>dibujar</strong> a sus Villanos y a sus propios <strong>Superhéroes ODS</strong>! Y luego, dibujaremos cómo se ve el mundo cuando gana el mal... ¡Uhhhh! 😨"
+                            <br><br>
+                            "¡Piensen cómo serán sus personajes! ¡Nos vemos en la Sesión 2 para darles vida! ¡Gracias por ser súper creadores hoy!"
+                        </td>
+                     </tr>
+                 </table>
+            </div>
+        </div>
+
+   </div> <!-- Cierre del container -->
+    <script>
+        // Scripts adicionales si es necesario (ya incluidos arriba: toggleContent, onload)
+    </script>
+</body>
+</html>
